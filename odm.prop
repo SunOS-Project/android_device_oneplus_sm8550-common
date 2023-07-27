@@ -20,6 +20,14 @@ vendor.display.enable_rounded_corner=0
 vendor.display.disable_noise_layer=1
 vendor.display.force_dv_support=1
 
+# Media
+vendor.media.vpp.oplus.version=2
+vendor.media.vpp.osie.enable=0
+vendor.media.vpp.osie.internal.enable=1
+vendor.media.vpp.osie.internal.version=osie2.0
+vendor.media.vpp.sr.enable=0
+vendor.media.vpp.sr.internal.enable=1
+
 # Radio
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.poweron_opt=1
