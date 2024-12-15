@@ -49,6 +49,11 @@ lib_fixups: lib_fixups_user_type = {
         'libQnnHtpPrepare',
         'libQnnHtpV73Stub',
         'libhwconfigurationutil',
+        'vendor.display.color@1.0',
+        'vendor.display.color@1.1',
+        'vendor.display.color@1.2',
+        'vendor.display.color@1.3',
+        'vendor.display.postproc@1.0',
         'vendor.oplus.hardware.cammidasservice-V1-ndk',
         'vendor.oplus.hardware.communicationcenter-V2-ndk',
         'vendor.oplus.hardware.performance-V1-ndk',
@@ -59,10 +64,16 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.pixelworks.hardware.feature@1.1',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.dpmservice@1.0',
+        'vendor.qti.hardware.ListenSoundModel@1.0',
+        'vendor.qti.hardware.limits@1.0',
+        'vendor.qti.hardware.limits@1.1',
+        'vendor.qti.hardware.iop@2.0',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccsyshal@1.1',
         'vendor.qti.hardware.qccsyshal@1.2',
         'vendor.qti.hardware.qccvndhal@1.0',
+        'vendor.qti.hardware.qccvndhal@1.0-halimpl',
+        'vendor.qti.qspmhal@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.imsrtpservice@3.1',
@@ -97,10 +108,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libziparchive.so', 'libziparchive_odm.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so'),
-    'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V3-cpp.so'),
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti', 'vendor/lib64/libqtikeymint.so'): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
